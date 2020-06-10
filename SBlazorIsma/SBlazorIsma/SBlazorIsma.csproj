@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorCRUB.Data.Dapper\BlazorCRUB.Data.Dapper.csproj" />
+    <ProjectReference Include="..\BlazorCRUB.Model\BlazorCRUB.Model.csproj" />
+  </ItemGroup>
+
 </Project>
