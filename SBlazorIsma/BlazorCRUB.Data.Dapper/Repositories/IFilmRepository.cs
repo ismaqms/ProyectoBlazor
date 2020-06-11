@@ -18,7 +18,5 @@ namespace BlazorCRUB.Data.Dapper.Repositories
         Task<bool> UpdateFilm(Film film);
 
         Task<bool> DeleteFilm(int id);
-
-
     }
 }

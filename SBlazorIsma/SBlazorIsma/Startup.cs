@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BlazorCRUB.Data.Dapper.Repositories;
+using BlazorCRUB.UI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
@@ -13,7 +14,6 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using SBlazorIsma.Data;
 using SBlazorIsma.Interfaces;
-using SBlazorIsma.Services;
 
 namespace SBlazorIsma
 {

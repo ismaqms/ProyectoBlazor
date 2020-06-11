@@ -7,13 +7,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SBlazorIsma.Services
+namespace BlazorCRUB.UI.Services
 {
     public class FilmService : IFilmService
     {
-
         private readonly SqlConfiguration _configuration;
         private IFilmRepository _filmRepository;
+
         public FilmService(SqlConfiguration configuration)
         {
             _configuration = configuration;
@@ -22,27 +22,25 @@ namespace SBlazorIsma.Services
 
         public Task<bool> DeleteFilm(int id)
         {
-            throw new NotImplementedException();
+            return _filmRepository.DeleteFilm(id);
         }
 
         public Task<IEnumerable<Film>> GetAllFilms()
         {
-            throw new NotImplementedException();
+            return _filmRepository.GetAllFilms();
         }
 
         public Task<Film> GetDetails(int id)
         {
-            throw new NotImplementedException();
+            return _filmRepository.GetFilmDetails(id);
         }
 
         public Task<bool> SaveFilm(Film film)
         {
             if (film.Id == 0)
-            {
                 return _filmRepository.InsertFilm(film);
-            }
-            else { return null;  }
+            else
+                return _filmRepository.UpdateFilm(film);
         }
-
     }
 }
